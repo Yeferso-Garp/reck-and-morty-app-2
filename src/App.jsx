@@ -11,7 +11,7 @@ function App() {
 
   const [inputValue, setInputValue] = useState(getRandomNumber(126));
 
-  const url = `https://rickandmortyapi.com/api/location/${inputValue || 'hola'}`
+  const url = `https://rickandmortyapi.com/api/location/${inputValue || 'undefined'}`
   const [ location, getLocation, hasError, isLoader ] = useFetch(url);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ function App() {
         ? <Loader />
         : (
           hasError
-            ? <h2 className='erro__digite'> ❎ Hey you must provide an 1 to 126 👀</h2>
+            ? <h2 className='error__digite'> ❎ Hey you must provide an 1 to 126 👀</h2>
             : 
                 <>
                   <LocationInfo 

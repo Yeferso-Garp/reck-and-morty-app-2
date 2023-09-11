@@ -19,7 +19,7 @@ const useFetch = (url) => {
                 console.log(err)
                 setHasError(true)
             })
-            .finally(() => {setIsLoader(false)});
+            .finally(() => {setIsLoader(false)})
     }
 
     return [infoApi, getApi, hasError, isLoader]
